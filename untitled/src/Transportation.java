@@ -1,3 +1,5 @@
+// Jack Cole
+
 public class Transportation {
     String vehicleType;
     Boolean rental;
