@@ -1,11 +1,11 @@
 // Jack Cole
 // Miles Tutt
 public class Transportation {
-    String vehicleType;
-    Boolean rental;
-    int speed;
-    int numPassengers;
-    double cost;
+    private String vehicleType;
+    private Boolean rental;
+    private int speed;
+    private int numPassengers;
+    private double cost;
 
     public Transportation(String vehicleType, Boolean rental, int speed, int numPassengers, double cost){
         this.vehicleType = vehicleType;
@@ -14,6 +14,7 @@ public class Transportation {
         this.numPassengers = numPassengers;
         this.cost = cost;
     }
+    //mutators
     public void setVehicleType(String vehicleType){
         this.vehicleType = vehicleType;
     }
@@ -29,6 +30,7 @@ public class Transportation {
     public void setNumPassengers(int numPassengers){
         this.numPassengers = numPassengers;
     }
+    //accessors
     public String getVehicleType(){
         return this.vehicleType;
     }
