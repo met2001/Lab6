@@ -1,5 +1,5 @@
 public class HotAirBalloon extends AirTransportation{
-    public HotAirBalloon(String vehicleType, Boolean rental, int speed, int numPassengers, double cost) {
-        super(vehicleType, rental, speed, numPassengers, cost);
+    public HotAirBalloon(Boolean rental, int speed, int numPassengers, double cost) {
+        super(rental, speed, numPassengers, cost);
     }
 }

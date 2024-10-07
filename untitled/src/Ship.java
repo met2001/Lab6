@@ -1,5 +1,5 @@
 public class Ship extends WaterTransportation{
-    public Ship(String vehicleType, Boolean rental, int speed, int numPassengers, double cost) {
-        super(vehicleType, rental, speed, numPassengers, cost);
+    public Ship(Boolean rental, int speed, int numPassengers, double cost) {
+        super(rental, speed, numPassengers, cost);
     }
 }
