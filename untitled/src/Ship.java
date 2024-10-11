@@ -1,5 +1,16 @@
 public class Ship extends WaterTransportation{
-    public Ship(Boolean rental, int speed, int numPassengers, double cost) {
-        super(rental, speed, numPassengers, cost);
+    private String shipCompany;
+    public Ship(String rentalOrTicket, double cost, int avgSpeed, int numPassengers, int nauticalMiles, String shipCompany) {
+        super(rentalOrTicket, cost, avgSpeed, numPassengers, nauticalMiles);
+        this.shipCompany = shipCompany;
+    }
+    public void setShipCompany(String shipCompany){
+        this.shipCompany = shipCompany;
+    }
+    public String getShipCompany(){
+        return this.shipCompany;
+    }
+    public String toString(){
+        return super.toString();
     }
 }

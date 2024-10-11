@@ -1,5 +1,17 @@
 public class Helicopter extends AirTransportation{
-    public Helicopter(Boolean rental, int speed, int numPassengers, double cost) {
-        super(rental, speed, numPassengers, cost);
+    private double fuel;
+    public Helicopter(String rentalOrTicket, double cost, int avgSpeed, int numPassengers, int milesTraveling, double fuel) {
+        super(rentalOrTicket, cost, avgSpeed, numPassengers, milesTraveling);
+        this.fuel = fuel;
+    }
+    public void setFuel(double fuel){
+        this.fuel = fuel;
+    }
+    public double getFuel(){
+        return this.fuel;
+    }
+    @Override
+    public String toString(){
+        return super.toString();
     }
 }

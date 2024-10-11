@@ -1,11 +1,25 @@
 
 public class LandTransportation extends Transportation {
+    private String fuelType;
+    private boolean isRental;
 
-    public LandTransportation(Boolean rental, int speed, int numPassengers, double cost) {
-        super(rental, speed, numPassengers, cost);
+    public LandTransportation(String rentalOrTicket, double cost, int avgSpeed,int numPassengers,
+                              String fuelType, boolean isRental) {
+        super(rentalOrTicket,cost,avgSpeed,numPassengers);
+        this.fuelType = fuelType;
+        this.isRental = isRental;
     }
-    @Override
-    public String toString(){
-        return String.format("%15s%15s%15s%15s\n","Bike","Bus","Train","Automobile");
+    public void setFuelType(String fuelType){
+        this.fuelType = fuelType;
     }
+    public void setRental(boolean isRental){
+        this.isRental = isRental;
+    }
+    public String getFuelType(){
+        return this.fuelType;
+    }
+    public boolean getRental(){
+        return this.isRental;
+    }
+
 }

@@ -1,11 +1,16 @@
 
 public class WaterTransportation extends Transportation{
+    private int nauticalMiles;
 
-    public WaterTransportation(Boolean rental, int speed, int numPassengers, double cost) {
-        super(rental, speed, numPassengers, cost);
+    public WaterTransportation(String rentalOrTicket, double cost, int avgSpeed, int numPassengers, int nauticalMiles) {
+        super(rentalOrTicket, cost, avgSpeed, numPassengers);
+        this.nauticalMiles = nauticalMiles;
     }
-    @Override
-    public String toString(){
-        return String.format("%15s%15s%15s%15s\n","Boat","Dirigible","Ship","Submarine");
+    public void setNauticalMiles(int nauticalMiles){
+        this.nauticalMiles = nauticalMiles;
     }
+    public int getNauticalMiles(){
+        return this.nauticalMiles;
+    }
+
 }
