@@ -12,6 +12,7 @@ public class Plane extends AirTransportation{
     }
     @Override
     public String toString(){
-        return super.toString();
+        return super.toString() +
+                "Airline: " + this.airline + "\n";
     }
 }

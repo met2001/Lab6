@@ -20,6 +20,7 @@ public class WTCTuttCole {
         System.out.print("What transportation would you like to use? (Land, Air, Water): ");
         String transportation = input.nextLine();
         if(transportation.equals("Land")){
+            //System.out.printf("%14s%14s%14s%14s",train, automobile, bus, bike);
             System.out.println(train);
             System.out.println(automobile);
             System.out.println(bus);
@@ -39,6 +40,6 @@ public class WTCTuttCole {
         else {
             System.out.println("Enter either (Land, Air, or Water)");
         }
-        System.out.println("")
+        System.out.println("");
     }
 }

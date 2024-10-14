@@ -12,5 +12,9 @@ public class WaterTransportation extends Transportation{
     public int getNauticalMiles(){
         return this.nauticalMiles;
     }
-
+    @Override
+    public String toString(){
+        return super.toString() +
+                "Nautical Miles: " + this.nauticalMiles + "\n";
+    }
 }

@@ -45,6 +45,10 @@ public class Transportation {
 
     @Override
     public String toString(){
-        return String.format("%14s%14s%14s%14s%14s\n%14s%14.2f%14d%14d","rentalOrTicket","Cost","Avg Speed","Passengers", "Type",this.rentalOrTicket,this.cost,this.avgSpeed,this.numPassengers);
+        //String header = String.format("%14s%14s%14s%14s%14s","Rent/Ticket","Cost","Avg Speed","Passengers","Type");
+        return String.format("%-20s%-14s\n","Rent/Ticket: ", this.rentalOrTicket) +
+                String.format("%-20s%-14.2f\n","Cost: ",this.cost) +
+                String.format("%-20s%-14s\n","Avg Speed: ", this.avgSpeed) +
+                String.format("%-20s%-14s\n","Num passengers: ", this.numPassengers);
     }
 }

@@ -12,6 +12,7 @@ public class Helicopter extends AirTransportation{
     }
     @Override
     public String toString(){
-        return super.toString();
+        return super.toString() +
+                "Fuel: " + this.fuel + "\n";
     }
 }

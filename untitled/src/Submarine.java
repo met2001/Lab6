@@ -11,6 +11,7 @@ public class Submarine extends WaterTransportation{
         return this.depth;
     }
     public String toString(){
-        return super.toString();
+        return super.toString() +
+                "Depth: " + this.depth + "\n";
     }
 }

@@ -13,6 +13,7 @@ public class Train extends LandTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() + String.format("%15s","Train\n");
+        return super.toString() +
+                String.format("%-20s%-14s\n","Station Dest: ",this.stationDest);
     }
 }

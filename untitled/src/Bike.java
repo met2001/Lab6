@@ -13,6 +13,7 @@ public class Bike extends LandTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() + String.format("%15s","Bike\n");
+        return super.toString() +
+                String.format("%-20s%-14s\n","Bike Model: ",this.bikeModel);
     }
 }

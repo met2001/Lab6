@@ -12,6 +12,7 @@ public class Boat extends WaterTransportation{
     }
     @Override
     public String toString(){
-        return super.toString();
+        return super.toString() +
+                "Has Motor: " + this.hasMotor + "\n";
     }
 }

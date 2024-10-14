@@ -21,5 +21,9 @@ public class LandTransportation extends Transportation {
     public boolean getRental(){
         return this.isRental;
     }
-
+    @Override
+    public String toString(){
+        return super.toString() +
+                String.format("%-20s%-14s\n","Fuel Type: ",this.fuelType);
+    }
 }
