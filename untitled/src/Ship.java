@@ -11,7 +11,7 @@ public class Ship extends WaterTransportation{
         return this.shipCompany;
     }
     public String toString(){
-        return super.toString() +
-                "Ship Company: " + this.shipCompany + "\n";
+        return String.format("%-20s\n", "Ship") + super.toString() +
+                String.format("%-20s%-14s\n","Ship Company: ",this.shipCompany);
     }
 }

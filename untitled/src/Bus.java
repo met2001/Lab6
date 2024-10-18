@@ -13,7 +13,7 @@ public class Bus extends LandTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() +
+        return String.format("%-20s\n", "Bus") + super.toString() +
                 String.format("%-20s%-14s\n","Destination: ",this.destination);
     }
 }

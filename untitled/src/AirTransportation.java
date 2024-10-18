@@ -14,6 +14,6 @@ public class AirTransportation extends Transportation{
     @Override
     public String toString(){
         return super.toString() +
-                "Miles Traveling: " + this.milesTraveling + "\n";
+                String.format("%-20s%-14s\n","Miles Traveling: ",this.milesTraveling);
     }
 }

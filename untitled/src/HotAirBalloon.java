@@ -12,7 +12,7 @@ public class HotAirBalloon extends AirTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() +
-                "Height: " + this.heightFeet + "\n";
+        return String.format("%-20s\n", "Hot Air Balloon") + super.toString() +
+                String.format("%-20s%-14s\n","Height: ",this.heightFeet);
     }
 }

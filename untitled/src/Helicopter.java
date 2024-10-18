@@ -12,7 +12,7 @@ public class Helicopter extends AirTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() +
-                "Fuel: " + this.fuel + "\n";
+        return String.format("%-20s\n", "Helicopter") + super.toString() +
+                String.format("%-20s%-14s\n","Fuel: ",this.fuel);
     }
 }

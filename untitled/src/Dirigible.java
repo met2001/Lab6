@@ -13,7 +13,7 @@ public class Dirigible extends AirTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() +
-                "Helium: " + this.heliumAmount + "\n";
+        return String.format("%-20s\n", "Dirigible") + super.toString() +
+                String.format("%-20s%-14s\n","Helium: ",this.heliumAmount);
     }
 }

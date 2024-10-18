@@ -13,7 +13,7 @@ public class Automobile extends LandTransportation{
     }
     @Override
     public String toString(){
-        return super.toString() +
+        return String.format("%-20s\n", "Automobile") + super.toString() +
                 String.format("%-20s%-14s\n","Model: ",this.model);
     }
 }

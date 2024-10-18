@@ -15,6 +15,6 @@ public class WaterTransportation extends Transportation{
     @Override
     public String toString(){
         return super.toString() +
-                "Nautical Miles: " + this.nauticalMiles + "\n";
+                String.format("%-20s%-14s\n","Nautical Miles: ",this.nauticalMiles);
     }
 }
