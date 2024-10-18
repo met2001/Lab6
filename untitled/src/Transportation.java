@@ -6,10 +6,10 @@ public class Transportation {
     private double cost;
     private int avgSpeed;
     private int numPassengers;
-
+    private int invoiceCost;
 
     public Transportation(String rentalOrTicket, double cost,int avgSpeed,int numPassengers){
-
+        this.invoiceCost = invoiceCost;
         this.rentalOrTicket = rentalOrTicket;
         this.cost = cost;
         this.avgSpeed = avgSpeed;
@@ -42,7 +42,9 @@ public class Transportation {
     public int getAvgSpeed(){
         return this.avgSpeed;
     }
-
+    public double invoice(int numOfPeople){
+        return numOfPeople * this.cost;
+    }
     @Override
     public String toString(){
         //String header = String.format("%14s%14s%14s%14s%14s","Rent/Ticket","Cost","Avg Speed","Passengers","Type");

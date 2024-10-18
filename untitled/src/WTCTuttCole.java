@@ -53,16 +53,35 @@ public class WTCTuttCole {
         for(int i = 0; i < options.length;i++){
             System.out.printf("%-5s%20s\n","[" + i + "]",options[i]);
         }
-        System.out.print("Make choice: ");
-        int transportOption = input.nextInt();
+        int transportOption = 0;
+        String verify = "No";
+        while(verify.equals("No")){
+            System.out.print("Make choice: ");
+            transportOption = input.nextInt();
+            input.nextLine();
+            System.out.print("Are you sure(Yes/No)? ");
+            verify = input.nextLine();
+
+        }
+
         if(transportation.equals("Land")){
             System.out.println(landTransport[transportOption]);
+            System.out.print("How many passengers? ");
+            int numberOfPassengers = input.nextInt();
+            System.out.printf("%-10s%10.2f","Cost: ", landTransport[transportOption].invoice(numberOfPassengers));
         }
         else if(transportation.equals("Air")){
             System.out.println(airTransport[transportOption]);
+            System.out.print("How many passengers? ");
+            int numberOfPassengers = input.nextInt();
+            System.out.printf("%-10s%10.2f","Cost: ", airTransport[transportOption].invoice(numberOfPassengers));
         }
         else{
             System.out.println(waterTransport[transportOption]);
+            System.out.print("How many passengers? ");
+            int numberOfPassengers = input.nextInt();
+            System.out.printf("%-10s%10.2f","Cost: ", waterTransport[transportOption].invoice(numberOfPassengers));
         }
+
     }
 }
