@@ -14,7 +14,7 @@ public class WTCTuttCole {
         Bus bus = new Bus("Ticket",10,40,30,"Gas",false,"Six Fork Road");
         Bike bike = new Bike("Rental",20,20,1,"None",true,"Schwynn");
         // Polymorphism
-        LandTransportation[] landTransport = {automobile,bus,bike};
+        LandTransportation[] landTransport = {train,automobile,bus,bike};
 
         Helicopter helicopter = new Helicopter("Ticket",900,50,5,70,343.23);
         HotAirBalloon hotairballoon = new HotAirBalloon("Ticket",300,10,6,3,1000.32);
@@ -22,34 +22,47 @@ public class WTCTuttCole {
         Dirigible dirigible = new Dirigible("Ticket",300,20,10,8,1059);
         // Polymorphism
         AirTransportation[] airTransport = {helicopter,hotairballoon,plane,dirigible};
-        String options = "";
+        String[] options = {};
 
         System.out.print("What transportation would you like to use? (Land, Air, Water): ");
         String transportation = input.nextLine();
+
         if(transportation.equals("Land")){
 
             for(LandTransportation landTrans : landTransport){
                 System.out.println(landTrans);
             }
-            options = "Train, Automobile, Bus, Bike";
+            options = new String[]{"Train", "Automobile", "Bus", "Bike"};
         } else if (transportation.equals("Air")) {
 
             for(AirTransportation airTrans : airTransport){
                 System.out.println(airTrans);
             }
-            options = "Helicopter, Hot Air Balloon, Plane, Dirigible";
+            options = new String[]{"Helicopter", "Hot Air Balloon", "Plane", "Dirigible"};
         } else if (transportation.equals("Water")) {
-            
+
             for(WaterTransportation waterTrans : waterTransport){
                 System.out.println(waterTrans);
             }
-            options = "Boat, Submarine, Ship";
+            options = new String[]{"Boat", "Submarine", "Ship"};
         }
         else {
             System.out.println("Enter either (Land, Air, or Water)");
         }
-        System.out.println("Options " + options + ": ");
-        String transportOption = input.nextLine();
-
+        System.out.println("Select which mode of transportation you would like.");
+        for(int i = 0; i < options.length;i++){
+            System.out.printf("%-5s%20s\n","[" + i + "]",options[i]);
+        }
+        System.out.print("Make choice: ");
+        int transportOption = input.nextInt();
+        if(transportation.equals("Land")){
+            System.out.println(landTransport[transportOption]);
+        }
+        else if(transportation.equals("Air")){
+            System.out.println(airTransport[transportOption]);
+        }
+        else{
+            System.out.println(waterTransport[transportOption]);
+        }
     }
 }
