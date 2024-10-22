@@ -25,21 +25,21 @@ public class WTCTuttCole {
         String[] options = {};
 
         System.out.print("What transportation would you like to use? (Land, Air, Water): ");
-        String transportation = input.nextLine();
+        String transportation = input.nextLine().toUpperCase();
 
-        if(transportation.equals("Land")){
+        if(transportation.equals("LAND")){
 
             for(LandTransportation landTrans : landTransport){
                 System.out.println(landTrans);
             }
             options = new String[]{"Train", "Automobile", "Bus", "Bike"};
-        } else if (transportation.equals("Air")) {
+        } else if (transportation.equals("AIR")) {
 
             for(AirTransportation airTrans : airTransport){
                 System.out.println(airTrans);
             }
             options = new String[]{"Helicopter", "Hot Air Balloon", "Plane", "Dirigible"};
-        } else if (transportation.equals("Water")) {
+        } else if (transportation.equals("WATER")) {
 
             for(WaterTransportation waterTrans : waterTransport){
                 System.out.println(waterTrans);
@@ -54,33 +54,45 @@ public class WTCTuttCole {
             System.out.printf("%-5s%20s\n","[" + i + "]",options[i]);
         }
         int transportOption = 0;
-        String verify = "No";
-        while(verify.equals("No")){
+        String verify = "NO";
+        while(verify.equals("NO")){
             System.out.print("Make choice: ");
             transportOption = input.nextInt();
             input.nextLine();
             System.out.print("Are you sure(Yes/No)? ");
-            verify = input.nextLine();
+            verify = input.nextLine().toUpperCase();
 
         }
 
-        if(transportation.equals("Land")){
+        if(transportation.equals("LAND")){
             System.out.println(landTransport[transportOption]);
-            System.out.print("How many passengers? ");
-            int numberOfPassengers = input.nextInt();
-            System.out.printf("%-10s%10.2f","Cost: ", landTransport[transportOption].invoice(numberOfPassengers));
+            int numberOfPassengers = 999999999;
+            while(numberOfPassengers > landTransport[transportOption].getNumPassengers()){
+                System.out.print("How many passengers? ");
+                numberOfPassengers = input.nextInt();
+            }
+
+            System.out.printf("%-10s%10s","Cost: ", "$" + landTransport[transportOption].invoice(numberOfPassengers));
         }
-        else if(transportation.equals("Air")){
+        else if(transportation.equals("AIR")){
             System.out.println(airTransport[transportOption]);
-            System.out.print("How many passengers? ");
-            int numberOfPassengers = input.nextInt();
-            System.out.printf("%-10s%10.2f","Cost: ", airTransport[transportOption].invoice(numberOfPassengers));
+            int numberOfPassengers = 999999999;
+            while(numberOfPassengers > airTransport[transportOption].getNumPassengers()){
+                System.out.print("How many passengers? ");
+                numberOfPassengers = input.nextInt();
+            }
+
+            System.out.printf("%-10s%10s","Cost: ", "$" + airTransport[transportOption].invoice(numberOfPassengers));
         }
-        else{
+        else if(transportation.equals("WATER")){
             System.out.println(waterTransport[transportOption]);
-            System.out.print("How many passengers? ");
-            int numberOfPassengers = input.nextInt();
-            System.out.printf("%-10s%10.2f","Cost: ", waterTransport[transportOption].invoice(numberOfPassengers));
+            int numberOfPassengers = 999999999;
+            while(numberOfPassengers > waterTransport[transportOption].getNumPassengers()){
+                System.out.print("How many passengers? ");
+                numberOfPassengers = input.nextInt();
+            }
+
+            System.out.printf("%-10s%10s","Cost: ", "$" + waterTransport[transportOption].invoice(numberOfPassengers));
         }
 
     }
